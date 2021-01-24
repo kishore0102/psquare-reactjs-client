@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-axios.defaults.baseURL = "https://psquare-springboot-service.herokuapp.com/api/";
+axios.defaults.baseURL = process.env.API_URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
 ReactDOM.render(
