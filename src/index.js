@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
+console.log("env api url - " + process.env.API_URL);
 axios.defaults.baseURL = process.env.API_URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
