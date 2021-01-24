@@ -3,6 +3,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
+require('dotenv').config();
+console.log(process.env.BASE_URL);
+
 console.log("node_env : " + process.env.NODE_ENV);
 console.log("api url : " + process.env.API_URL);
 console.log("api url : " + process.env.PSQUARE_API_URL);
