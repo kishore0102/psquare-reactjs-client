@@ -5,6 +5,7 @@ import App from "./App";
 
 console.log("node_env : " + process.env.NODE_ENV);
 console.log("api url : " + process.env.API_URL);
+console.log("api url : " + process.env.PSQUARE_API_URL);
 axios.defaults.baseURL = process.env.API_URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
