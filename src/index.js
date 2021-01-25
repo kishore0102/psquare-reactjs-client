@@ -3,7 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-console.log("psquare api url - " + process.env.REACT_APP_PSQUARE_API_URL);
 axios.defaults.baseURL = process.env.REACT_APP_PSQUARE_API_URL;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
