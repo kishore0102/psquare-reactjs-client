@@ -51,8 +51,8 @@ export default class Register extends Component {
 		).catch(
 			err => {
 				this.setState({ registerBtn_value: "Register" });
-				this.setState({ error_message: err.response.data.message });
-				if (this.state.error_message === "Account is not activated - OTP sent to respective mail") {
+				this.setState({ error_message: err.response.data.message + " (Please do check spam if not in inbox)" });
+				if (err.response.data.message === "Account is not activated - OTP sent to respective mail") {
 					this.setState({ register_disabled: true });
 					this.setState({ notActivated: true })
 				}
@@ -141,6 +141,9 @@ export default class Register extends Component {
 						<input type="password" className="form-control" placeholder="Password" required="required"
 							disabled={(this.state.register_disabled) ? "disabled" : ""}
 							onChange={e => this.password = e.target.value} />
+					</div>
+					<div className="clearfix">
+						<p className="float-left">(Password must contain 1 upper, 1 lower, 1 number and 1 special character)</p>
 					</div>
 					<div className="form-group">
 						<input type="password" className="form-control" placeholder="Re-type Password" required="required"

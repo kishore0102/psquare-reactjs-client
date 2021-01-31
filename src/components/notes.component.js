@@ -69,7 +69,7 @@ export default class Notes extends Component {
 				<br />
 				<div className="notes-card d-flex justify-content-between">
 					<div className="d-flex flex-row">
-						<h4>Hello {this.props.user.firstname}!</h4>
+						<h4>Notes</h4>
 					</div>
 					<div className="d-flex flex-row-reverse">
 						<button key="addNotesBtn" type="button" className="btn btn-warning"

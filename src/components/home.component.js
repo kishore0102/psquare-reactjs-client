@@ -21,7 +21,7 @@ export default class Home extends Component {
 						<h5 className="card-title">Notes</h5>
 					</div>
 				</a>
-				<a href="/notes" className="card" style={{ "width": "18rem" }}>
+				<a href="/calendar" className="card" style={{ "width": "18rem" }}>
 					<div className="card-body">
 						<h5 className="card-title">Calendar</h5>
 					</div>

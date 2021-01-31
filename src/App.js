@@ -9,6 +9,7 @@ import Register from "./components/register.component";
 import Newnote from "./components/newnote.component";
 import UpdateNote from "./components/updatenote.component";
 import Home from "./components/home.component";
+import Calendarapp from "./components/calendarapp.component";
 
 export default class App extends Component {
 
@@ -29,12 +30,13 @@ export default class App extends Component {
                 <div className="App">
                     <Nav user={this.state.user} />
                     <Switch>
-                        <Route exact path="/home" component={() => <Home user={this.state.user} />} />
-                        <Route exact path="/" component={() => <Notes user={this.state.user} />} />
+                        <Route exact path="/" component={() => <Home user={this.state.user} />} />
                         <Route exact path="/login" component={() => <Login />} />
                         <Route exact path="/register" component={() => <Register />} />
+                        <Route exact path="/notes" component={() => <Notes user={this.state.user} />} />
                         <Route exact path="/newnote" component={() => <Newnote />} />
                         <Route exact path="/updatenote" render={(props) => <UpdateNote {...props} />} />
+                        <Route exact path="/calendar" component={() => <Calendarapp user={this.state.user} />} />
                     </Switch>
                 </div>
             </BrowserRouter>

@@ -26,7 +26,7 @@ export default class UpdateNote extends Component {
 			axios.post("/notes/updateNotes", notesData).then(
 				res => {
 					console.log("notes added success", res);
-					window.location.replace("/");
+					window.location.replace("/notes");
 				}
 			).catch(
 				err => {

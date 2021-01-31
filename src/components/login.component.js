@@ -39,8 +39,8 @@ export default class Login extends Component {
 			err => {
 				this.setState({ loginBtn_value: "Login" });
 				console.log("login error", err.response);
-				this.setState({ error_message: err.response.data.message });
-				if (this.state.error_message === "Account is not activated - OTP sent to respective mail") {
+				this.setState({ error_message: err.response.data.message + " (Please do check spam if not in inbox)" });
+				if (err.response.data.message === "Account is not activated - OTP sent to respective mail") {
 					this.setState({ notActivated: true });
 				} else {
 					this.setState({ login_disabled: false });

@@ -18,11 +18,11 @@ export default class Newnote extends Component {
 			axios.post("/notes/addNotes", notesData).then(
 				res => {
 					console.log("notes added success", res);
-					window.location.replace("/");
+					window.location.replace("/notes");
 				}
 			).catch(
 				err => {
-					console.log("notes deleted failure", err);
+					console.log("notes added failure", err);
 					this.setState({ error_message: err.response.data.message });
 				}
 			);
